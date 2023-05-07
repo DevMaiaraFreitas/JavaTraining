@@ -65,9 +65,11 @@ public class Post {
         return comments;
     }
 
-    public void setComments(List<Comment> comments) {
-        this.comments = comments;
-    }
-    
-    
+   public void addcomment(Comment comment){
+       comments.add(comment);
+   }
+   
+   public void removecomment(Comment comment){
+       comments.remove(comment);
+   }
 }
