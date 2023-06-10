@@ -1,33 +1,31 @@
 
 package entities;
 
-/**
- *
- * @author Maiara Cristina Freitas
- */
-public class OutsourcedEmployee extends Employee{
-    
-   private Double additionalCharge;
+public class OutsourcedEmployee extends Employee {
 
-    public OutsourcedEmployee() {
-        super();
-    }
+	private Double additionalCharge;
 
-    public OutsourcedEmployee(Double additionalCharge, String name, Integer hours, Double valuePerHour) {
+	public OutsourcedEmployee() {
+		super();
+	}
+
+    public OutsourcedEmployee(String name, Double hours, Double valuePerHour,Double additionalCharge) {
         super(name, hours, valuePerHour);
         this.additionalCharge = additionalCharge;
     }
+	
+	
 
-    public Double getAdditionalCharge() {
-        return additionalCharge;
-    }
+	public Double getAdditionalCharge() {
+		return additionalCharge;
+	}
 
-    public void setAdditionalCharge(Double additionalCharge) {
-        this.additionalCharge = additionalCharge;
-    }
-    
-    @Override
-     public double payment(){
-        return super.payment()+additionalCharge*1.1;
-    }
+	public void setAdditionalCharge(Double additionalCharge) {
+		this.additionalCharge = additionalCharge;
+	}
+	
+	@Override
+	public double payment() {
+		return super.payment() + additionalCharge * 1.1;
+	}
 }
